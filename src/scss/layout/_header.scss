@@ -1,0 +1,124 @@
+@import "vars";
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    padding: 50px 0;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        width: 151px;
+        display: block;
+        flex-shrink: 0;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    &__burger {
+        display: none;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    &__link {
+        margin-left: 35px;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 122%;
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        padding: 40px 0;
+    }
+    .nav {
+        &__link {
+            margin-left: 25px;
+            font-size: 27px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        padding: 25px 0;
+        &__logo {
+            position: relative;
+            z-index: 15;
+        }
+        &__burger {
+            z-index: 15;
+            display: flex;
+            align-items: center;
+            width: 40px;
+            height: 30px;
+            position: relative;
+            span {
+                height: 3px;
+                width: 100%;
+                display: block;
+                background-color: $black;
+                transition: all .225s;
+                &:nth-child(1) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &:nth-child(3) {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            &--active {
+                span {
+                    &:nth-child(1) {
+                        transform: translateY(14px) rotate(-45deg);
+                    }
+                    &:nth-child(2) {
+                        transform: scale(0);
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(-14px) rotate(45deg);
+                    }
+                }
+                &~.nav {
+                    left: 0;
+                }
+            }
+        }
+    }
+    .nav {
+        display: block;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 12;
+        background-color: $primary;
+        padding: 120px 20px 50px;
+        overflow-y: auto;
+        transition: all .225s;
+        &__link {
+            display: block;
+            margin: 0 0 25px 0;
+            text-transform: capitalize;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

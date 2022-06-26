@@ -1,0 +1,55 @@
+@import "vars";
+.footer {
+    padding: 45px 0 67px;
+    background-image: url(../img/bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    &__title {
+        font-size: 36px;
+        line-height: 125%;
+    }
+    &__link {
+        display: block;
+        font-size: 28px;
+        line-height: 125%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .footer {
+        &__inner {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer {
+        &__inner {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        &__inner {
+            grid-template-columns: 1fr;
+        }
+        &__title {
+            font-size: 27px;
+        }
+        &__link {
+            font-size: 22px;
+            margin-top: 15px;
+        }
+    }
+}

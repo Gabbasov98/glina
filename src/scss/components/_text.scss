@@ -1,0 +1,131 @@
+@import "../vars";
+.display1 {
+    font-family: $font2;
+    font-size: 120px;
+    line-height: 97.5%;
+    text-transform: uppercase;
+}
+
+.display2 {
+    font-family: $font2;
+    font-size: 90px;
+    line-height: 97.5%;
+    text-transform: uppercase;
+    &--arrow {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 26px;
+            height: 3px;
+            background-color: $black;
+            right: 100%;
+            top: 50%;
+            transform: translate(-7px, -50%);
+        }
+    }
+}
+
+.body-text,
+p,
+li {
+    font-size: 32px;
+    line-height: 122%;
+}
+
+p {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+ul {
+    padding-left: 22px;
+    &:not(:last-child) {
+        margin-bottom: 70px;
+    }
+    li {
+        padding-left: 32px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 5px;
+            height: 5px;
+            background-color: $black;
+            border-radius: 50%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .display1 {
+        font-size: 100px;
+    }
+    .display2 {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .display1 {
+        font-size: 80px;
+    }
+    .display2 {
+        font-size: 70px;
+    }
+    .body-text,
+    p,
+    li {
+        font-size: 25px;
+    }
+    p {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .display1 {
+        font-size: 60px;
+    }
+    .display2 {
+        font-size: 50px;
+    }
+    .body-text,
+    p,
+    li {
+        font-size: 18px;
+    }
+    p {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    ul {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .display1 {
+        font-size: 40px;
+    }
+    .display2 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .display1 {
+        font-size: 32px;
+    }
+}
