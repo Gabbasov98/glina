@@ -4,7 +4,7 @@ function mainSlider() {
         spaceBetween: 28,
         breakpoints: {
             320: {
-                slidesPerView: 1,
+                slidesPerView: 1.5,
             },
             576: {
                 slidesPerView: 2,
