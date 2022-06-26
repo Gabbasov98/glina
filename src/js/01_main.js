@@ -45,6 +45,26 @@ if (header) {
     }
 }
 
+let scrollBtn = document.querySelector(".scroll-up")
+
+if (scrollBtn) {
+    showScrollBtn()
+    window.onscroll = function() {
+        showScrollBtn()
+    }
+    scrollBtn.onclick = function() {
+        window.scrollTo(0, 0);
+    }
+}
+
+function showScrollBtn() {
+    if (window.scrollY > 150) {
+        scrollBtn.classList.add("scroll-up--active")
+    } else {
+        scrollBtn.classList.remove("scroll-up--active")
+    }
+}
+
 
 function fixHeader() {
     if (window.scrollY > 150) {
