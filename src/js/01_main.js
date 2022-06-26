@@ -11,8 +11,15 @@ function mainSlider() {
             },
         }
     })
+
+    if (window.innerWidth < 576) {
+        swiper.slideTo(1)
+    }
 }
 
+window.resize = function() {
+    mainSlider()
+}
 
 mainSlider()
 

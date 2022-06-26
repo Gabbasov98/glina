@@ -545,7 +545,8 @@
     .main {
         .swiper {
             &-container {
-                width: 100%;
+                margin: 0 auto;
+                width: 258px;
             }
             &-slide {
                 width: 258px;
