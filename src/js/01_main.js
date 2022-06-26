@@ -47,3 +47,11 @@ function fixHeader() {
     }
 
 }
+
+let anchorLinks = document.querySelectorAll(".nav__link")
+anchorLinks.forEach(el => {
+    el.onclick = function() {
+        burger.classList.remove("header__burger--active")
+        body.classList.remove("fixed-body")
+    }
+});
