@@ -1,11 +1,15 @@
 @import "vars";
 .header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     left: 0;
     top: 0;
     z-index: 10;
     padding: 50px 0;
+    &--fix {
+        background-color: $primary;
+        box-shadow: 0 5px 12px rgba(51, 51, 51, .1);
+    }
     &__inner {
         display: flex;
         align-items: center;
